@@ -27,6 +27,8 @@ Cómo podemos observar encerramos entre comillas los comandos de Python que dar�
 docker-compose up -d
 #+END_SRC
 
+[[https://i.ibb.co/tpKr9k0/django.png]]
+
 ** Flake8
 
 Flake8 es una herramienta de linting y verificación de código para Python. 
