@@ -21,7 +21,11 @@ Los comandos que se ejecutarán para hacer que funcione nuestro contenedor son:
 docker-compose run --rm app sh -c "django-admin startproject recipes ."
 #+END_SRC
 
-Cómo podemos observar encerramos entre comillas los comandos de Python que darán ordenes dentro de nuestro contenedor de Docker, en este caso hemos ejecutado la orden de la creación de un proyecto de Django.
+Cómo podemos observar encerramos entre comillas los comandos de Python que darán ordenes dentro de nuestro contenedor de Docker, en este caso hemos ejecutado la orden de la creación de un proyecto de Django. Ahora, si queremos ver que nuestro proyecto recién creado en el contenedor funciona podemos ejecutar el siguiente comando que levantará el servicio del servidor de Django:
+
+#+BEGIN_SRC
+docker-compose up -d
+#+END_SRC
 
 ** Flake8
 
