@@ -1,0 +1,40 @@
+** Plantilla-Django
+Hemos creado con DOCKER una plantilla con la imagen de Python para empezar a crear proyectos de Django.
+
+Una vez configurados los archivos Dockerfile, docker-compose.yml, requirements.txt, damos los respectivos comando para crear las imágenes y servicios a partir de la configuración implementada:
+
+Para definir las dependecias desde Dockerfile:
+
+#+BEGIN_SRC
+docker build .
+#+END_SRC
+
+Para indicar cómo correr las imágenes y servicios:
+
+#+BEGIN_SRC
+docker-compose build
+#+END_SRC
+
+Los comandos que se ejecutarán para hacer que funcione nuestro contenedor sonn:
+
+#+BEGIN_SRC
+docker-compose run --rm app sh -c "django-admin startproject recipes ."
+#+END_SRC
+
+Cómo podemos observar encerramos entre comillas los comandos de Python darán ordenes dentro de nuestro contenedor de Docker, en este caso hemos ejecutado la creación de un proyecto de Django.
+
+** Flake8
+
+flake8 es una herramienta de linting y verificación de código para Python. 
+Su objetivo principal es ayudar a los desarrolladores a mantener un código Python limpio y legible mediante la identificación de errores de estilo y problemas potenciales en el código fuente.
+
+El comando para ejecutar flake8 y verificar nuestro código:
+
+#+BEGIN_SRC
+docker-compose run --rm app sh -c "flake8"
+#+END_SRC
+
+
+
+
+
